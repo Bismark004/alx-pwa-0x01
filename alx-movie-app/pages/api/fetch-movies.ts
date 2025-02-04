@@ -22,7 +22,7 @@ export default async function handler (request: NextApiRequest, response: NextAp
     const moviesResponse = await resp.json();
     const movies: MoviesProps[] = moviesResponse.results;
 
-    return response.status(200).json({
+    return response.status(200).json({  
       movies,
     });
   } else {
